@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MADA — Agence d'Ingénierie & Développement Logiciel</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            500: '#0066ff',
+                            600: '#0052cc',
+                            900: '#030712',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-nav {
+            background: rgba(3, 7, 18, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 50%, #93C5FD 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-glow {
+            position: absolute;
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(3, 7, 18, 0) 70%);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-[#030712] text-gray-100 font-sans antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3 group">
+                <!-- Logo MADA Intégré -->
+                <img src="logo.png" alt="MADA Logo" class="h-10 w-auto object-contain">
+                <span class="text-2xl font-extrabold tracking-wider text-white">MADA<span class="text-blue-500">.</span></span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#expertises" class="hover:text-blue-400 transition-colors">Expertises</a>
+                <a href="#process" class="hover:text-blue-400 transition-colors">Méthodologie</a>
+                <a href="#stack" class="hover:text-blue-400 transition-colors">Technologies</a>
+                <a href="#faq" class="hover:text-blue-400 transition-colors">FAQ</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="relative group overflow-hidden px-6 py-2.5 rounded-xl font-semibold text-sm text-white bg-blue-600 hover:bg-blue-500 transition-all duration-300 shadow-lg shadow-blue-600/25">
+                    Planifier un appel
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-36 pb-24 md:pt-48 md:pb-36 px-6 max-w-7xl mx-auto overflow-hidden">
+        <div class="hero-glow"></div>
+        <div class="text-center relative z-10">
+            
+            <!-- Affiche du Logo au centre du Hero -->
+            <div class="mb-8 flex justify-center">
+		<img src="logo.png" alt="MADA Logo Grand" class="h-24 md:h-32 w-auto object-contain">
+            </div>
+
+            <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-card border border-blue-500/30 mb-8">
+                <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                <span class="text-xs font-semibold uppercase tracking-widest text-blue-400">Software & Web Engineering Studio</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.1] max-w-5xl mx-auto">
+                Nous concevons des logiciels d'élite & des plateformes <span class="text-gradient">hautement scalables.</span>
+            </h1>
+            
+            <p class="mt-8 text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-normal leading-relaxed">
+                MADA est une agence d'ingénierie logicielle spécialisée dans la création d'architectures sur-mesure, d'applications web complexes et d'écosystèmes digitaux performants.
+            </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 transition shadow-xl shadow-blue-500/20 text-center">
+                    Lancer votre projet ➔
+                </a>
+                <a href="#expertises" class="px-8 py-4 rounded-xl font-semibold text-gray-300 glass-card hover:bg-gray-800/80 transition text-center">
+                    Découvrir nos services
+                </a>
+            </div>
+
+            <!-- Social Proof Metrics -->
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto border-t border-gray-800/80 pt-10">
+                <div>
+                    <p class="text-3xl font-extrabold text-white">99.9%</p>
+                    <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Fiabilité Code & Uptime</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-extrabold text-white">100%</p>
+                    <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Sur-mesure</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-extrabold text-white">Agile</p>
+                    <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Sprints de 2 semaines</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-extrabold text-white">24/7</p>
+                    <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Support & Maintenance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Expertises -->
+    <section id="expertises" class="py-24 bg-gray-950/50 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-blue-500 font-semibold text-sm uppercase tracking-wider">Nos Spécialisations</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white mt-2">Solutions d'ingénierie sur mesure</h2>
+                </div>
+                <p class="text-gray-400 max-w-md mt-4 md:mt-0 text-sm">
+                    De la conception d'architecture à la mise en production, nous appliquons les standards de développement les plus rigoureux.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-blue-500/40 transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                            💻
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Logiciels Métiers & SaaS</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Plateformes de gestion, ERP, CRM et solutions SaaS à forte valeur ajoutée conçues pour optimiser vos opérations complexes.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 text-xs text-gray-400 border-t border-gray-800 pt-4">
+                        <li class="flex items-center">✓ Architecture Microservices / Monolithe Modulaire</li>
+                        <li class="flex items-center">✓ Sécurité & Conformité RGPD</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-blue-500/40 transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                            🌐
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Applications Web Modernes</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Développement front-end et back-end réactifs avec rendu ultra-rapide (SSR/SSG), optimisés pour la conversion et l'expérience utilisateur.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 text-xs text-gray-400 border-t border-gray-800 pt-4">
+                        <li class="flex items-center">✓ Next.js / React High-Performance</li>
+                        <li class="flex items-center">✓ SEO Technique & Vitesse de chargement</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-blue-500/40 transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                            🔌
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">APIs & Intégrations Cloud</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Conception d'APIs RESTful et GraphQL robustes pour connecter vos systèmes existants avec des services tiers en toute sécurité.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 text-xs text-gray-400 border-t border-gray-800 pt-4">
+                        <li class="flex items-center">✓ Spring Boot & Node.js Core</li>
+                        <li class="flex items-center">✓ Pipelines CI/CD & Déploiement Cloud</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Méthodologie / Processus -->
+    <section id="process" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-blue-500 font-semibold text-sm uppercase tracking-wider">Notre Processus</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-2">Une approche structurée & transparente</h2>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="glass-card p-6 rounded-2xl relative">
+                <span class="text-4xl font-extrabold text-blue-500/20 absolute top-4 right-4">01</span>
+                <h4 class="text-lg font-bold text-white mb-2">Audit & Cadrage</h4>
+                <p class="text-xs text-gray-400 leading-relaxed">Analyse précise de vos exigences techniques, définition de l'architecture et rédaction du cahier des charges.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl relative">
+                <span class="text-4xl font-extrabold text-blue-500/20 absolute top-4 right-4">02</span>
+                <h4 class="text-lg font-bold text-white mb-2">Design UI/UX</h4>
+                <p class="text-xs text-gray-400 leading-relaxed">Prototypage haute fidélité axé sur l'ergonomie, le parcours utilisateur et l'identité visuelle de votre marque.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl relative">
+                <span class="text-4xl font-extrabold text-blue-500/20 absolute top-4 right-4">03</span>
+                <h4 class="text-lg font-bold text-white mb-2">Développement Agile</h4>
+                <p class="text-xs text-gray-400 leading-relaxed">Programmation propre, contrôlée par versioning (Git), avec livraisons régulières et tests automatisés.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl relative">
+                <span class="text-4xl font-extrabold text-blue-500/20 absolute top-4 right-4">04</span>
+                <h4 class="text-lg font-bold text-white mb-2">Déploiement & Suivi</h4>
+                <p class="text-xs text-gray-400 leading-relaxed">Mise en production sécurisée, optimisation des serveurs et maintenance corrective & évolutive continue.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section id="stack" class="py-20 bg-gray-950/50 border-y border-gray-900">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-blue-500 font-semibold text-sm uppercase tracking-wider">Stack Technologique</span>
+            <h2 class="text-3xl font-extrabold text-white mt-2 mb-12">Des technologies éprouvées par les leaders du secteur</h2>
+
+            <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                <span class="glass-card px-5 py-3 rounded-xl text-sm font-semibold text-gray-200 border border-gray-800">React.js</span>
+                <span class="glass-card px-5 py-3 rounded-xl text-sm font-semibold text-gray-200 border border-gray-800">Next.js</span>
+                <span class="glass-card px-5 py-3 rounded-xl text-sm font-semibold text-gray-200 border border-gray-800">TypeScript</span>
+                <span class="glass-card px-5 py-3 rounded-xl text-sm font-semibold text-gray-200 border border-gray-800">Java Spring Boot</span>
+                <span class="glass-card px-5 py-3 rounded-xl text-sm font-semibold text-gray-200 border border-gray-800">Node.js / Express</span>
+                <span class="glass-card px-5 py-3 rounded-xl text-sm font-semibold text-gray-200 border border-gray-800">Tailwind CSS</span>
+                <span class="glass-card px-5 py-3 rounded-xl text-sm font-semibold text-gray-200 border border-gray-800">PostgreSQL</span>
+                <span class="glass-card px-5 py-3 rounded-xl text-sm font-semibold text-gray-200 border border-gray-800">MySQL</span>
+                <span class="glass-card px-5 py-3 rounded-xl text-sm font-semibold text-gray-200 border border-gray-800">Docker & Git</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="text-blue-500 font-semibold text-sm uppercase tracking-wider">Questions Fréquentes</span>
+            <h2 class="text-3xl font-extrabold text-white mt-2">Tout ce que vous devez savoir</h2>
+        </div>
+
+        <div class="space-y-4">
+            <div class="glass-card p-6 rounded-xl">
+                <h3 class="text-base font-bold text-white mb-2">Combien de temps prend le développement d'un projet ?</h3>
+                <p class="text-sm text-gray-400">Un site web vitrine ou une application standard prend généralement entre 2 et 4 semaines. Pour un logiciel sur-mesure ou une solution SaaS complexe, les délais varient de 6 à 12 semaines selon le périmètre fonctionnel.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl">
+                <h3 class="text-base font-bold text-white mb-2">Fournissez-vous la maintenance après la livraison ?</h3>
+                <p class="text-sm text-gray-400">Oui, nous proposons des contrats de maintenance préventive, corrective et évolutive pour garantir le bon fonctionnement, la sécurité et la mise à jour constante de vos plateformes.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl">
+                <h3 class="text-base font-bold text-white mb-2">Suis-je propriétaire du code source ?</h3>
+                <p class="text-sm text-gray-400">Absolument. Dès la finalisation du projet et le règlement complet, l'intégralité des droits de propriété intellectuelle et du code source vous est transférée.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-24 bg-gray-950 border-t border-gray-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-blue-500 font-semibold text-sm uppercase tracking-wider">Contact & Devis</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mt-2">Parlons de votre futur projet</h2>
+                <p class="text-gray-400 text-sm mt-3">Remplissez ce formulaire pour obtenir une estimation détaillée sous 24h.</p>
+            </div>
+
+            <form class="glass-card p-8 md:p-10 rounded-2xl border border-gray-800 space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Nom & Prénom *</label>
+                        <input type="text" required placeholder="Ex: Ala Belhaj" class="w-full bg-gray-900/90 border border-gray-800 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Email Professionnel *</label>
+                        <input type="email" required placeholder="contact@entreprise.com" class="w-full bg-gray-900/90 border border-gray-800 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Téléphone / WhatsApp</label>
+                        <input type="tel" placeholder="+216 -- --- ---" class="w-full bg-gray-900/90 border border-gray-800 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Type de projet</label>
+                        <select class="w-full bg-gray-900/90 border border-gray-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition">
+                            <option>Développement Application Web</option>
+                            <option>Logiciel Sur-Mesure / ERP / CRM</option>
+                            <option>API & Architecture Cloud</option>
+                            <option>Refonte & Optimisation</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Description du projet & Objectifs *</label>
+                    <textarea rows="5" required placeholder="Décrivez les fonctionnalités clés, les objectifs et les contraintes éventuelles..." class="w-full bg-gray-900/90 border border-gray-800 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-4 rounded-xl font-bold text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 transition shadow-lg shadow-blue-600/30 text-sm uppercase tracking-wider">
+                    Envoyer la demande de devis
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-900 bg-black text-gray-500 text-xs">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-3">
+                <img src="logobg.png" alt="MADA Logo Footer" class="h-8 w-auto rounded">
+                <span class="text-gray-600">|</span>
+                <span>Ingénierie Web & Logiciel</span>
+            </div>
+            <p>&copy; 2026 MADA. Tous droits réservés.</p>
+            <div class="flex space-x-6">
+                <a href="https://www.instagram.com/get.mada/" class="hover:text-gray-300 transition">Instagram</a>
+                <a href="#" class="hover:text-gray-300 transition">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
